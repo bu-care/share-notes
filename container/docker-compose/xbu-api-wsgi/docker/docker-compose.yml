@@ -1,0 +1,36 @@
+version: '3.0'
+services:
+
+    xbu_api:
+        restart: "always"
+        image: xbu_api
+        container_name: xbuApi
+        # tty: true     # 给容器设置一个伪终端防止进程结束容器退出
+        build:
+            context: ../code/xbuApi
+            dockerfile: $PWD/xbuApi/Dockerfile
+        volumes:
+            - xbu_api_data:/app
+        ports:
+            - "1993:80"
+#        networks:
+#            - xbu_api_net
+        environment:
+            FLASK_ENV: development
+
+volumes:
+    xbu_api_data:
+        driver: local
+        driver_opts:
+            type: local
+            device: /srv/xbuApi/app
+            o: bind
+
+#networks:
+#  xbu_api_net:
+#    driver: bridge
+#    ipam:
+#      config:
+#        - subnet: 169.254.100.0/24
+
+

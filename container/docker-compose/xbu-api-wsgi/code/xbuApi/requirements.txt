@@ -1,0 +1,22 @@
+pymongo==3.12.0
+flask
+requests
+paramiko
+
+gevent-websocket
+
+# Flask==2.0.2
+# Jinja2==2.11.1
+# Werkzeug==0.16.1
+# Flask-Session
+# gunicorn
+# markupsafe==2.0.1
+# Flask
+Jinja2
+Werkzeug
+Flask-Session
+gunicorn
+markupsafe
+gevent
+
+ 

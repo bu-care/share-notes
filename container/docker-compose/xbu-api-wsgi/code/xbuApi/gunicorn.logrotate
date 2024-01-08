@@ -1,0 +1,12 @@
+/var/log/gunicorn/gunicorn.log {
+	daily
+	missingok
+	rotate 14
+	compress
+	delaycompress
+	notifempty
+	sharedscripts
+	postrotate
+		kill -USR1 `cat /run/gunicorn.pid`
+	endscript
+}

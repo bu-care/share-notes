@@ -1,0 +1,11 @@
+.idea
+*.idea*
+.DS_Store
+
+*/.DS_Store
+
+.obsidian
+
+*reports/
+*runtime/
+.vscode
