@@ -84,6 +84,10 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io
 sudo gpasswd -a $USER docker
 newgrp docker
 # 执行 docker info 查看
+
+# 如果遇到报错，dial unix /var/run/docker.sock: connect: permission denied，对/var/run/docker.sock进行赋予666权限
+ll /var/run/docker.sock
+chmod 666 /var/run/docker.sock
 ```
 
 ## 遇到的docker错误
